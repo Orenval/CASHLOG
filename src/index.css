@@ -367,3 +367,181 @@ h1 {
   font-size: 14px;
   margin-bottom: 16px;
 }
+
+/* At-a-Glance Cards */
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.glance-card {
+  background: var(--plum-bg);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.glance-card:first-child {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.glance-card:last-child {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+}
+
+.glance-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.glance-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.text-danger {
+  color: var(--danger) !important;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  margin-bottom: 0;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--plum);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.btn-text:hover {
+  background: var(--plum-bg);
+}
+
+/* Category Progress */
+.category-progress {
+  margin-bottom: 14px;
+}
+
+.category-progress:last-child {
+  margin-bottom: 0;
+}
+
+.category-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.category-progress-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.category-progress-numbers {
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--cream-dark);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--plum);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.over {
+  background: var(--danger);
+}
+
+.progress-fill.savings {
+  background: #2e7d32;
+}
+
+/* Recent Transactions */
+.recent-list {
+  list-style: none;
+}
+
+.recent-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.recent-list li:last-child {
+  border-bottom: none;
+}
+
+.recent-list li:hover {
+  background: var(--plum-bg);
+  border-radius: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+/* Savings */
+.savings-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.savings-achieved {
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 6px;
+}
