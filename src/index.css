@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --plum: #7b2d8e;
+  --plum-light: #a855c9;
+  --plum-bg: #f3e8f8;
+  --cream: #fffdd0;
+  --cream-dark: #f5f0c0;
+  --text: #3d1f4a;
+  --text-light: #6b4a7a;
+  --danger: #d32f2f;
+  --shadow: 0 2px 8px rgba(123, 45, 142, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+  min-height: 100vh;
+  color: var(--text);
+}
+
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.app {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--plum);
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.budget-section {
+  margin-bottom: 20px;
+}
+
+.budget-section label {
+  display: block;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.budget-section input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--cream-dark);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.budget-section input:focus {
+  border-color: var(--plum);
+}
+
+.input-section {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.input-section input,
+.input-section select {
+  padding: 10px 14px;
+  border: 2px solid var(--cream-dark);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  flex: 1;
+  min-width: 120px;
+}
+
+.input-section input:focus,
+.input-section select:focus {
+  border-color: var(--plum);
+}
+
+.input-section select {
+  background: white;
+  cursor: pointer;
+}
+
+.input-section button {
+  padding: 10px 20px;
+  background: var(--plum);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.input-section button:hover {
+  background: var(--plum-light);
+}
+
+.summary {
+  background: var(--plum-bg);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.summary .over-budget {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.expense-list {
+  list-style: none;
+}
+
+.expense-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--cream-dark);
+  transition: background 0.15s;
+}
+
+.expense-list li:last-child {
+  border-bottom: none;
+}
+
+.expense-list li:hover {
+  background: var(--plum-bg);
+  border-radius: 8px;
+}
+
+.expense-category {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  background: var(--plum);
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.expense-name {
+  flex: 1;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.expense-amount {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+  background: rgba(211, 47, 47, 0.08);
+}
